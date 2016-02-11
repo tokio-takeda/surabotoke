@@ -1,13 +1,13 @@
 package jp.surabotoke.model.character.parameter.physical;
 
 public class Strength {
-    private String value;
+    private Integer value;
 
-    public Strength(String value) {
+    public Strength(Integer value) {
         this.value = value;
     }
 
-    public String getValue() {
+    public Integer getValue() {
         return value;
     }
 }

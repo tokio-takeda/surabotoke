@@ -1,13 +1,13 @@
 package jp.surabotoke.model.character.parameter.physical;
 
 public class Luck {
-    private String value;
+    private Integer value;
 
-    public Luck(String value) {
+    public Luck(Integer value) {
         this.value = value;
     }
 
-    public String getValue() {
+    public Integer getValue() {
         return value;
     }
 }

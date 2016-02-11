@@ -1,52 +1,31 @@
 package jp.surabotoke.model.character.parameter;
 
-import jp.surabotoke.model.character.parameter.physical.Agility;
-import jp.surabotoke.model.character.parameter.physical.Luck;
-import jp.surabotoke.model.character.parameter.physical.Strength;
-import jp.surabotoke.model.character.parameter.physical.Vitality;
+import jp.surabotoke.model.character.parameter.context.Context;
+import jp.surabotoke.model.character.parameter.physical.PhysicalAbility;
 
 public class Parameter {
-    private Strength strength;
-    private Agility agility;
-    private Vitality vitality;
-    private Luck luck;
-    
-    public Parameter(Strength strength, Agility agility, Vitality vitality, Luck luck) {
-        this.strength = strength;
-        this.agility = agility;
-        this.vitality = vitality;
-        this.luck = luck;
-    }
+	private Context context;
+	private PhysicalAbility physicalAbility;
+	
+	public Parameter(Context context, PhysicalAbility physicalAbility) {
+		this.context = context;
+		this.physicalAbility = physicalAbility;
+	}
 
-    public Strength getStrength() {
-        return strength;
-    }
+	public Context getContext() {
+		return context;
+	}
 
-    public void setStrength(Strength strength) {
-        this.strength = strength;
-    }
+	public void setContext(Context context) {
+		this.context = context;
+	}
 
-    public Agility getAgility() {
-        return agility;
-    }
+	public PhysicalAbility getPhysicalAbility() {
+		return physicalAbility;
+	}
 
-    public void setAgility(Agility agility) {
-        this.agility = agility;
-    }
-
-    public Vitality getVitality() {
-        return vitality;
-    }
-
-    public void setVitality(Vitality vitality) {
-        this.vitality = vitality;
-    }
-
-    public Luck getLuck() {
-        return luck;
-    }
-
-    public void setLuck(Luck luck) {
-        this.luck = luck;
-    }
+	public void setPhysicalAbility(PhysicalAbility physicalAbility) {
+		this.physicalAbility = physicalAbility;
+	}
+	
 }

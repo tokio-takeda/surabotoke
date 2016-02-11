@@ -2,6 +2,14 @@ package jp.surabotoke.model.character.profile;
 
 import jp.surabotoke.model.character.profile.basicinformation.Name;
 
-public interface Profile {
-    public Name getName();
+public class Profile {
+	private Name name;
+	
+	public Profile(Name name) {
+		this.name = name;
+	}
+	
+    public Name getName() {
+    	return name;
+    };
 }
