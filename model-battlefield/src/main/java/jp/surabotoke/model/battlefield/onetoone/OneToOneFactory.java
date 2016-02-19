@@ -1,5 +1,6 @@
-package jp.surabotoke.model.battlefield;
+package jp.surabotoke.model.battlefield.onetoone;
 
+import jp.surabotoke.model.battlefield.BattleFieldFactory;
 import jp.surabotoke.model.character.avatar.Avatar;
 import jp.surabotoke.model.character.avatar.AvatarFactory;
 import jp.surabotoke.model.character.surabotoke.Surabotoke;

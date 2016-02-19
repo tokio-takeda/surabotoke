@@ -17,7 +17,7 @@ public class HitPoint {
         return current;
     }
     
-    public void damage(int damageValue) {
-        
+    protected void injured(int damage) {
+        current -= damage;
     }
 }

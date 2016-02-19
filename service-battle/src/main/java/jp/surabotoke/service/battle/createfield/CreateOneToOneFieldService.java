@@ -1,7 +1,7 @@
 package jp.surabotoke.service.battle.createfield;
 
 import jp.surabotoke.model.battlefield.BattleField;
-import jp.surabotoke.model.battlefield.OneToOneFactory;
+import jp.surabotoke.model.battlefield.onetoone.OneToOneFactory;
 
 public class CreateOneToOneFieldService implements CreateFieldService {
 

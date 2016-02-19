@@ -1,30 +1,46 @@
 package jp.surabotoke.model.character.surabotoke;
 
+import jp.surabotoke.model.character.Chara;
 import jp.surabotoke.model.character.parameter.Parameter;
 import jp.surabotoke.model.character.profile.Profile;
+import jp.surabotoke.model.character.state.CharacterState;
 
-public class Surabotoke {
+public class Surabotoke implements Chara{
     private Profile profile;
     private Parameter parameter;
 
-    public Surabotoke(Profile profile, Parameter parameter) {
+    private CharacterState currentState;
+
+    public Surabotoke(Profile profile, Parameter parameter, CharacterState currentState) {
     	this.profile = profile;
     	this.parameter = parameter;
+    	this.currentState = currentState;
+    }
+    
+    public void injured(int damage) {
+    	parameter.injured(damage);
     }
     
     public Profile getProfile() {
         return profile;
     }
 
-    public Parameter parameter() {
+    public Parameter getParameter() {
         return parameter;
     }
     
-    public String getCurrentState() {
-    	String currentState = new String();
-    	
-    	currentState = "普通の状態";
-    	
-    	return currentState;
-    }
+	@Override
+	public CharacterState getCurrentState() {
+		return currentState;
+	}
+
+	@Override
+	public void setCurrentState(CharacterState currentState) {
+		this.currentState = currentState;
+	}
+
+	@Override
+	public String showCurrentState() {
+		return currentState.getValue();
+	}
 }

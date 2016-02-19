@@ -11,6 +11,7 @@ import jp.surabotoke.model.character.parameter.physical.Strength;
 import jp.surabotoke.model.character.parameter.physical.Vitality;
 import jp.surabotoke.model.character.profile.Profile;
 import jp.surabotoke.model.character.profile.basicinformation.Name;
+import jp.surabotoke.model.character.state.CharacterState;
 
 public class SurabotokeFactory {
 	public Surabotoke create() {
@@ -22,12 +23,12 @@ public class SurabotokeFactory {
 		Context context = new Context(level, hitPoint);
 
 		Strength strength = new Strength(10);
-		Agility agility = new Agility(10);
+		Agility agility = new Agility(new Double(10));
 		Vitality vitality = new Vitality(10);
 		Luck luck = new Luck(10);
 		PhysicalAbility physicalAbility = new PhysicalAbility(strength, agility, vitality, luck);
 		Parameter parameter = new Parameter(context, physicalAbility);
 		
-		return new Surabotoke(profile, parameter);
+		return new Surabotoke(profile, parameter, CharacterState.FINE);
 	}
 }

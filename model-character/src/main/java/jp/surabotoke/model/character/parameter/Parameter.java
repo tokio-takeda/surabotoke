@@ -12,6 +12,10 @@ public class Parameter {
 		this.physicalAbility = physicalAbility;
 	}
 
+	public void injured(int damage) {
+		context.injured(damage);
+	}
+	
 	public Context getContext() {
 		return context;
 	}

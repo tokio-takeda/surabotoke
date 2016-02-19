@@ -1,13 +1,13 @@
 package jp.surabotoke.model.character.parameter.physical;
 
 public class Agility {
-    private Integer value;
+    private Double value;
 
-    public Agility(Integer value) {
+    public Agility(Double value) {
         this.value = value;
     }
 
-    public Integer getValue() {
+    public Double getValue() {
         return value;
     }
 }

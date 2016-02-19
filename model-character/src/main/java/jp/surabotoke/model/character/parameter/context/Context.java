@@ -25,4 +25,7 @@ public class Context {
 		this.hitPoint = hitPoint;
 	}
 	
+	public void injured(int damage) {
+		hitPoint.injured(damage);
+	}
 }
